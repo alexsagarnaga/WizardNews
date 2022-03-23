@@ -44,6 +44,13 @@ app.get("/", (req, res) => {
   res.send(html);
 });
 
+app.get("/posts/:id", (req, res) => {
+  const id = req.params.id;
+  const title = req.params.title;
+  const post = postBank.find(id, title);
+  res.send(post);
+});
+
 app.listen(PORT, () => {
   console.log(`App listening in port ${PORT}`);
 });
