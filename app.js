@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const postBank = require("./postBank");
 const app = express();
-const PORT = 1337;
+const { PORT = 1337 } = process.env;
 // const staticMiddleware = express.static(path.join(_dirname, "public"));
 // app.use(staticMiddleware);
 const path = require("path");
